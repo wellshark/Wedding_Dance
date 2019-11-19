@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+body {
+  font-family: $base-font;
+}
+
+h1 {
+  @include font-properties(bold, $h1-desktop, 68px);
+
+  margin: 0;
+}
+
+h2 {
+  @include font-properties(bold, $h2-desktop, 93.9%);
+
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+
+  @include font-properties(500, $h3-desktop, 29px);
+}
+
+h4 {
+  @include font-properties(bold, $h4-desktop, 93.9%);
+}
+
+p {
+  @include font-properties(normal, $p-desktop, 24px);
+}
+
+.low-description {
+  @include font-properties(normal, 16px, 153.4%);
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.logo {
+  @include font-properties(700, $logo-desktop, 93.9%);
+}
+
+@media (max-width: $breakpoint-mobile) {
+  h1 {
+    font-size: $h1-mobile;
+    line-height: 93.9%;
+  }
+
+  h2 {
+    font-size: $h2-mobile;
+    line-height: 93.9%;
+  }
+
+  h3 {
+    font-size: $h3-mobile;
+    line-height: 17px;
+  }
+
+  h4 {
+    font-size: $h4-mobile;
+    line-height: 93.9%;
+  }
+
+  p {
+    font-size: $p-mobile;
+    line-height: 153.4%;
+  }
+
+  .low-description {
+    font-size: $low-description-mobile;
+  }
+}

@@ -306,17 +306,15 @@ template {
   display: none; }
 
 body {
-  font-family: 'Montserrat', sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 h1 {
-  font-style: normal;
   font-weight: bold;
   font-size: 72px;
   line-height: 68px;
   margin: 0; }
 
 h2 {
-  font-style: normal;
   font-weight: bold;
   font-size: 36px;
   line-height: 93.9%;
@@ -329,19 +327,16 @@ h3 {
   line-height: 29px; }
 
 h4 {
-  font-style: normal;
   font-weight: bold;
   font-size: 24px;
   line-height: 93.9%; }
 
 p {
-  font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 24px; }
 
 .low-description {
-  font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 153.4%; }
@@ -353,17 +348,36 @@ a {
 a:hover {
   text-decoration: underline; }
 
+.logo {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 93.9%; }
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 36px;
+    line-height: 93.9%; }
+  h2 {
+    font-size: 24px;
+    line-height: 93.9%; }
+  h3 {
+    font-size: 14px;
+    line-height: 17px; }
+  h4 {
+    font-size: 18px;
+    line-height: 93.9%; }
+  p {
+    font-size: 14px;
+    line-height: 153.4%; }
+  .low-description {
+    font-size: 13px; } }
+
 .container {
   width: 95%;
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 15px 0 15px;
   box-sizing: border-box; }
-
-.logo {
-  font-size: 18px;
-  line-height: 93.9%;
-  font-weight: 700; }
 
 .button {
   border: 2px solid #000;
@@ -402,23 +416,6 @@ a:hover {
 @media (max-width: 576px) {
   .container {
     width: 100%; }
-  h1 {
-    font-size: 36px;
-    line-height: 93.9%; }
-  h2 {
-    font-size: 24px;
-    line-height: 93.9%; }
-  h3 {
-    font-size: 14px;
-    line-height: 17px; }
-  h4 {
-    font-size: 18px;
-    line-height: 93.9%; }
-  p {
-    font-size: 14px;
-    line-height: 153.4%; }
-  .low-description {
-    font-size: 13px; }
   .section__description {
     margin: 12px 0 32px; }
   .section-margin {
@@ -428,8 +425,8 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
   flex-wrap: wrap;
+  padding: 20px 0;
   position: relative; }
 
 .header__nav-wrap {
@@ -445,8 +442,7 @@ a:hover {
 
 .nav-horizontal__link {
   padding: 0 12px;
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
+  font-family: "Roboto", sans-serif;
   font-weight: normal;
   font-size: 14px;
   line-height: 16px; }
@@ -581,20 +577,19 @@ a:hover {
   margin-bottom: 45px; }
 
 @media (max-width: 992px) {
+  .introduction__wrap {
+    flex-direction: column-reverse; }
   .introduction__right-wrap {
-    width: 100%;
+    flex-basis: 100%;
     height: 40vh;
-    position: absolute;
-    left: 0;
+    min-height: 375px;
     margin: 0;
-    flex: none;
-    overflow-x: hidden;
     background-size: cover; }
   .introduction__left-wrap {
     flex: none;
-    margin-top: calc(40vh + 40px);
     width: 100%;
-    margin-bottom: 0; } }
+    margin-bottom: 0;
+    margin-top: 50px; } }
 
 @media (max-width: 576px) {
   .introduction__description {
@@ -607,7 +602,7 @@ a:hover {
     margin: 20px 8px;
     border: 1px solid rgba(0, 0, 0, 0.04);
     box-sizing: border-box;
-    box-shadow: 0 4px 30px rgba(207, 207, 207, 0.25);
+    box-shadow: 0 4px 15px rgba(207, 207, 207, 0.25);
     border-radius: 2px; }
   .cards__description-wrap {
     margin: 40px 24px; }
@@ -645,19 +640,18 @@ a:hover {
   width: 6px;
   height: 6px;
   border-radius: 100%;
-  content: '';
+  content: "";
   text-align: center;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   opacity: 1; }
 
+.slick-dotted.slick-slider {
+  margin-bottom: 6px; }
+
 @media (min-width: 992px) {
   .slick-dots {
     display: none !important; } }
-
-@media (max-width: 992px) {
-  .services {
-    overflow-x: hidden; } }
 
 @media (max-width: 576px) {
   .slick-track {
@@ -710,7 +704,6 @@ a:hover {
   .footer__logo {
     color: #fff; }
   .footer__copyright {
-    font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 153.4%;
@@ -718,8 +711,8 @@ a:hover {
 
 @font-face {
   font-family: "icons";
-  src: url("../assets/fonts/icons.eot");
-  src: url("../assets/fonts/icons.eot?#iefix") format("eot"), url("../assets/fonts/icons.woff2") format("woff2"), url("../assets/fonts/icons.woff") format("woff"), url("../assets/fonts/icons.ttf") format("truetype"), url("../assets/fonts/icons.svg#icons") format("svg"); }
+  src: url("../../assets/fonts/icons.eot");
+  src: url("../../assets/fonts/icons.eot?#iefix") format("eot"), url("../../assets/fonts/icons.woff2") format("woff2"), url("../../assets/fonts/icons.woff") format("woff"), url("../../assets/fonts/icons.ttf") format("truetype"), url("../../assets/fonts/icons.svg#icons") format("svg"); }
 
 .icon:before {
   font-family: "icons";

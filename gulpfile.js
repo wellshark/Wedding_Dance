@@ -14,8 +14,8 @@ var gulp = require('gulp'),
 
 sass.compiler = require('node-sass');
 
-gulp.task('sass', function () {
-    return gulp.src('app/sass/**/*.sass')
+gulp.task('scss', function () {
+    return gulp.src('app/scss/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('app/css'));
 });
@@ -45,8 +45,7 @@ gulp.task('server', function () {
         server: "app/"
     });
 
-    gulp.watch('app/sass/**/*.sass',  gulp.series('sass'));
-    gulp.watch('app/sass/**/*.scss',  gulp.series('sass'));
+    gulp.watch('app/scss/**/*.scss',  gulp.series('scss'));
 
     gulp.watch("app/css/*.css", function () {
         return gulp.src("app/css/*.css").pipe(browserSync.stream());
@@ -97,9 +96,9 @@ gulp.task( 'iconfont', async () => {
     gulp.src( 'app/assets/icons/*.svg' )
     .pipe( iconfontCss( {
         // где будет наш scss файл
-        targetPath   : '../../sass/_icons.scss',
+        targetPath   : '../../scss/base/_icons.scss',
         // пути подлючения шрифтов в _icons.scss
-        fontPath     : '../assets/fonts/',
+        fontPath     : '../../assets/fonts/',
         fontName    : fontName
 
     } ) )
@@ -116,4 +115,4 @@ gulp.task( 'iconfont', async () => {
 
 
 gulp.task('build', gulp.series('minCSS', 'compress_js', 'not_cached_image_min', 'html_rebuild', 'export'));
-gulp.task('default', gulp.series('sass', 'server'));
+gulp.task('default', gulp.series('scss', 'server'));
