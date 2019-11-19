@@ -1,0 +1,110 @@
+h1
+  font-style: normal
+  font-weight: bold
+  font-size: 72px
+  line-height: 68px
+  margin: 0
+
+h2
+  font-style: normal
+  font-weight: bold
+  font-size: 36px
+  line-height: 93.9%
+  margin: 0
+
+h3
+  margin: 0
+  font-weight: 500
+  font-size: 24px
+  line-height: 29px
+h4
+  font-style: normal
+  font-weight: bold
+  font-size: 24px
+  line-height: 93.9%
+p
+  font-style: normal
+  font-weight: normal
+  font-size: 16px
+  line-height: 24px
+.low-description
+  font-style: normal
+  font-weight: normal
+  font-size: 16px
+  line-height: 153.4%
+a
+  text-decoration: none
+  color: $black
+
+a:hover
+  text-decoration: underline
+
+.container
+  width: 95%
+  max-width: 1440px
+  margin: 0 auto
+  padding: 0 15px 0 15px
+  box-sizing: border-box
+
+
+.logo
+  font-size: 18px
+  line-height: 93.9%
+  font-weight: 700
+
+.button
+  border: 2px solid $black
+  box-sizing: border-box
+  border-radius: 3px
+  padding: 10px 30px
+  font-weight: 600
+  outline: none
+  background-color: transparent
+  cursor: pointer
+  &:hover
+    border-color: $pink
+    color: $pink
+  &_pink
+    border-color: $pink
+    color: $pink
+    &:hover
+      border-color: $black
+      color: $black
+
+.list-correction
+  list-style-type: none
+  padding-left: 0
+  margin: 0
+
+.section
+  &__description
+    width: 50%
+    margin: 24px 0 52px
+    @media (max-width: 992px)
+      width: 100%
+.section-margin
+  margin: 100px 0
+@media (max-width: 576px)
+  .container
+    width: 100%
+  h1
+    font-size: 36px
+    line-height: 93.9%
+  h2
+    font-size: 24px
+    line-height: 93.9%
+  h3
+    font-size: 14px
+    line-height: 17px
+  h4
+    font-size: 18px
+    line-height: 93.9%
+  p
+    font-size: 14px
+    line-height: 153.4%
+  .low-description
+    font-size: 13px
+  .section__description
+    margin: 12px 0 32px
+  .section-margin
+    margin: 50px 0
