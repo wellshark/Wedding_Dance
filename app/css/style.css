@@ -600,11 +600,9 @@ a:hover {
   .introduction__description {
     margin: 18px 0 24px; } }
 
-.services {
-  overflow-x: hidden; }
-
 .cards {
-  margin: -20px 0; }
+  margin: -20px 0;
+  display: flex; }
   .cards__card-item {
     margin: 20px 8px;
     border: 1px solid rgba(0, 0, 0, 0.04);
@@ -656,6 +654,10 @@ a:hover {
 @media (min-width: 992px) {
   .slick-dots {
     display: none !important; } }
+
+@media (max-width: 992px) {
+  .services {
+    overflow-x: hidden; } }
 
 @media (max-width: 576px) {
   .slick-track {

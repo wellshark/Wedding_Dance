@@ -201,36 +201,6 @@ in happiness
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
-<script>
-    $(".cards").slick({
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        dots: true,
-        arrows: false,
-        infinite: false,
-        responsive: [
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    dots: true,
-                    infinite: false
-                }
-            },
-            {
-                breakpoint: 576,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    centerMode: true,
-                    centerPadding: '35px',
-                    infinite: true,
-                    dots: true
-                }
-            }
-        ]
-    });
-</script>
+<script src="js/slick-responsive.js"></script>
 </body>
 </html>
