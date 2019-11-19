@@ -18,13 +18,6 @@
     width: 187px;
     margin: 20px 30px;
 
-    @media (max-width: 1071px) {
-      width: 270px;
-    }
-
-    @media (min-width: 1332px) {
-      width: 240px;
-    }
   }
 
   &__description {
@@ -32,10 +25,18 @@
   }
 }
 
+@media (min-width: $breakpoint-desktop) {
+  .icons__item {
+    width: 21%;
+    margin: 20px 0;
+  }
+}
 @media (max-width: $breakpoint-mobile) {
   .icons__item {
-    width: 160px;
+    width: 45%;
     margin: 20px 0;
+    //margin: 0;
+    justify-content: space-between;
   }
 
   .icons__font {

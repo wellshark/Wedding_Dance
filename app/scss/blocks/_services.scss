@@ -12,7 +12,7 @@
     margin: 20px 8px;
     border: 1px solid rgba(0, 0, 0, 0.04);
     box-sizing: border-box;
-    box-shadow: 0 4px 15px rgba(207, 207, 207, 0.25);
+    box-shadow: 0 0 8px rgba(207, 207, 207, 0.3);
     border-radius: 2px;
   }
 
@@ -89,7 +89,7 @@
 
 @media (max-width: $breakpoint-mobile) {
   .slick-track {
-    left: (-42px) !important;
+    left: (-34px) !important;
   }
 
   .cards {
