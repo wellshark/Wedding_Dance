@@ -3,3 +3,26 @@
   font-size: $size;
   line-height: $line-height;
 }
+$animation-speed: .3s !default;
+$easing-default: linear;
+
+@mixin animate($properties, $duration: $animation-speed, $easing: $easing-default) {
+  $list:();
+  @each $prop in $properties {
+    $str: #{$prop} #{$duration} #{$easing};
+    $list: join($list, #{$str}, comma);
+  }
+  transition: $list;
+}
+
+// custom font mixin
+@mixin fontface ($fontfamily, $filename, $fontweight: normal, $fontstyle: normal) {
+  font-family: $fontfamily;
+  src:url('../fonts/#{$filename}.eot');
+  src:url('../fonts/#{$filename}.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/#{$filename}.woff') format('woff'),
+  url('../fonts/#{$filename}.ttf') format('truetype'),
+  url('../fonts/#{$filename}.svg#{$filename}') format('svg');
+  font-weight: $fontweight;
+  font-style: $fontstyle;
+}

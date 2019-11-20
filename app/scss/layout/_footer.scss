@@ -9,12 +9,12 @@
   }
 
   &__logo {
-    color: #fff;
+    color: $white;
   }
 
   &__copyright {
     @include font-properties(normal, 16px, 153.4%);
 
-    color: #FFFFFF;
+    color: $white;
   }
 }
