@@ -1,9 +1,3 @@
-.services {
-  //overflow-x: hidden;
-
-  //overflow-y: hidden
-}
-
 .cards {
   margin: (-20px) 0;
   display: flex;
@@ -25,12 +19,11 @@
   }
 
   &__title {
+    margin-top: 0;
     margin-bottom: 24px;
   }
 
   &__img {
-    //width: 100%;
-    //object-fit: contain;
     @extend %responsive-image
   }
 }
@@ -84,9 +77,6 @@
   }
 }
 
-//@media (max-width: $breakpoint-tablet)
-//  .services
-//    overflow-x: hidden
 
 @media (max-width: $breakpoint-mobile) {
   .slick-track {
@@ -94,10 +84,17 @@
   }
 
   .cards {
-    margin: (-20px) 0;
+    margin: (-20px) -16px -20px 0;
 
     &__card-item {
       margin: 20px 6px;
     }
+    &__title {
+      margin-bottom: 16px;
+    }
+    &__description-wrap {
+      margin: 32px 16px;
+    }
   }
+
 }

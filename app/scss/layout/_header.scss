@@ -51,7 +51,7 @@
     align-items: flex-start;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.8s ease;
+    transition: max-height 0.5s ease;
   }
 
   .header__nav {
@@ -83,6 +83,7 @@
   width: 32px;
   height: 32px;
   position: relative;
+  display: block;
 }
 
 .hamburger__bar {

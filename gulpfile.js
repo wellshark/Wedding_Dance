@@ -11,7 +11,7 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     iconfont    =   require( 'gulp-iconfont' ),
     iconfontCss =   require( 'gulp-iconfont-css' );
-
+//gulp-tinyimg
 sass.compiler = require('node-sass');
 
 gulp.task('scss', function () {
